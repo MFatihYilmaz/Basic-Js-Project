@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="container">
+        <form action="log">
+            <label for="number">Numaranızı Giriniz :</label>
+            <input type="text" name="number" id="no">
+            <label for="password">Şifrenizi Giriniz :</label>
+            <input type="password" id="psw" name="password">
+            <button type="button" id="loginb">Giriş</button>
+            <a href="" id="kayit"><small>Hesabınız yoksa tıklayınız</small> </a>
+        </form>
+        
+    </div>
+    <div class="container" id="sign-in">
+        <form action="sign">
+            <label for="name">Adınızı Giriniz:</label>
+            <input type="text" name="name" id="sname" placeholder="isminiz">
+            <label for="last-name">Soyadınızı Giriniz:</label>
+            <input type="text" id="slname" name="last-name" placeholder="soyadınız">
+            <label for="sifre">Sifrenizi Giriniz</label>
+            <input name="password" type="password" id="spsw" placeholder="sifreniz">
+            <button type="button" id="submit">Üye ol</button>
+            <small id="showNo"></small>
+        </form>
+    </div>
+</body>
+<script src="deneme.js"></script>
+<script src="script.js"></script>
+<script>
+    $(document).ready(function(){
+        $("#kayit").click(function(e){
+            e.preventDefault();
+            $("#sign-in").fadeToggle("slow");
+        })
+    })
+</script>
+</html>
